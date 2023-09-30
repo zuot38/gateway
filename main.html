@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gateway</title>
+    <style>
+        #gatewayBox {
+            border: 2px solid black;
+            padding: 20px;
+            width: 400px;
+            margin: 50px auto;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        #enterButton:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+<div id="gatewayBox">
+    This is a gateway to "Discord Automod Bypasser". This site will log your visit and the browser that you are using right now. YOUR IP WILL NOT BE LOGGED. If you don't want to be logged, please DO NOT ENTER. If you don't care, click the checkbox and enter. THIS SITE DOESN'T LOG ANYTHING AND IT NEVER WILL!
+    <br><br>
+    <input type="checkbox" id="consentCheckbox"> I agree and wish to enter.
+    <br><br>
+    <button id="enterButton" disabled onclick="redirectToSite()">Enter</button>
+</div>
+
+<script>
+    document.getElementById("consentCheckbox").addEventListener("change", function() {
+        if (this.checked) {
+            document.getElementById("enterButton").disabled = false;
+        } else {
+            document.getElementById("enterButton").disabled = true;
+        }
+    });
+
+    function redirectToSite() {
+        window.location.href = "https://zuot38.github.io/bypasser/";
+    }
+</script>
+
+</body>
+</html>
