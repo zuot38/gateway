@@ -1,48 +1,51 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gateway</title>
+    <title>Upír Dex</title>
     <style>
-        #gatewayBox {
-            border: 2px solid black;
-            padding: 20px;
-            width: 400px;
-            margin: 50px auto;
-            font-size: 14px;
-            text-align: center;
+        body {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+            font-family: Arial, sans-serif;
         }
 
-        #enterButton:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
+        h1 {
+            font-size: 54px;
+            transition: font-size 0.5s;
+        }
+
+        h1:hover {
+            font-size: 60px;
+            animation: colorChange 2s infinite;
+        }
+
+        @keyframes colorChange {
+            0% {color: #9b59b6;}
+            25% {color: #8e44ad;}
+            50% {color: #be2edd;}
+            75% {color: #e84393;}
+            100% {color: #9b59b6;}
+        }
+
+        iframe {
+            margin-top: 20px;
+            border: none;
         }
     </style>
 </head>
+
 <body>
-
-<div id="gatewayBox">
-    This is a gateway to "Discord Automod Bypasser". This site will log your visit and the browser that you are using right now. YOUR IP WILL NOT BE LOGGED. If you don't want to be logged, please DO NOT ENTER. If you don't care, click the checkbox and enter. THIS SITE DOESN'T LOG ANYTHING AND IT NEVER WILL!
-    <br><br>
-    <input type="checkbox" id="consentCheckbox"> I agree and wish to enter.
-    <br><br>
-    <button id="enterButton" disabled onclick="redirectToSite()">Enter</button>
-</div>
-
-<script>
-    document.getElementById("consentCheckbox").addEventListener("change", function() {
-        if (this.checked) {
-            document.getElementById("enterButton").disabled = false;
-        } else {
-            document.getElementById("enterButton").disabled = true;
-        }
-    });
-
-    function redirectToSite() {
-        window.location.href = "https://zuot38.github.io/bypasser/";
-    }
-</script>
-
+    <h1>Upír Dex</h1>
+    <img src="https://cdn.discordapp.com/attachments/818961695825199134/1167231088192655451/upir.png" alt="Upír">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/TO1BHE8gFTE?autoplay=1&mute=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
+
 </html>
